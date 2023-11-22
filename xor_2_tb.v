@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/13/2023 02:23:45 PM
+// Create Date: 09/09/2023 01:26:38 PM
 // Design Name: 
-// Module Name: half_subtractor_tb
+// Module Name: xor_2_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module half_subtractor_tb();
+module xor_2_tb();
 reg a,b;
-wire diff,borrow;
-half_subtractor uut(.a(a),.b(b),.diff(diff),.borrow(borrow));
+wire c;
+xor_2 uut(.a(a),.b(b),.c(c));
 initial
     begin
     a=1'b0;b=1'b0;

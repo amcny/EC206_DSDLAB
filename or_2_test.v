@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/13/2023 02:23:45 PM
+// Create Date: 09/05/2023 10:36:09 PM
 // Design Name: 
-// Module Name: half_subtractor_tb
+// Module Name: or_2_test
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module half_subtractor_tb();
+module or_2_test();
 reg a,b;
-wire diff,borrow;
-half_subtractor uut(.a(a),.b(b),.diff(diff),.borrow(borrow));
+wire c;
+or_2_tb uut(.a(a),.b(b),.c(c));
 initial
     begin
     a=1'b0;b=1'b0;
