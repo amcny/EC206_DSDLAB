@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/13/2023 02:20:21 PM
+// Create Date: 09/27/2023 04:23:26 PM
 // Design Name: 
-// Module Name: half_subtractor
+// Module Name: mux41
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,10 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module half_subtractor(
-    input a,b,
-    output diff,borrow
+module mux41(
+    input a,b,c,d,
+    output y
     );
-assign diff=a^b;
-assign borrow=(~a)&b;
+assign y=
 endmodule

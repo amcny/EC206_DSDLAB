@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/13/2023 02:20:21 PM
+// Create Date: 09/20/2023 02:50:21 PM
 // Design Name: 
-// Module Name: half_subtractor
+// Module Name: multiplexer
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,10 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module half_subtractor(
+module multiplexer(
     input a,b,
-    output diff,borrow
+    output s,y
     );
-assign diff=a^b;
-assign borrow=(~a)&b;
+ass
 endmodule

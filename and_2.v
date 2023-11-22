@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/13/2023 02:20:21 PM
+// Create Date: 09/05/2023 10:22:44 PM
 // Design Name: 
-// Module Name: half_subtractor
+// Module Name: and_2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,10 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module half_subtractor(
+module and_2(
     input a,b,
-    output diff,borrow
+    output c
     );
-assign diff=a^b;
-assign borrow=(~a)&b;
+ assign c=a&b;
 endmodule
