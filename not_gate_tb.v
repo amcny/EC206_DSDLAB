@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/13/2023 02:23:45 PM
+// Create Date: 09/05/2023 10:29:13 PM
 // Design Name: 
-// Module Name: half_subtractor_tb
+// Module Name: not_gate_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,18 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module half_subtractor_tb();
-reg a,b;
-wire diff,borrow;
-half_subtractor uut(.a(a),.b(b),.diff(diff),.borrow(borrow));
+module not_gate_tb();
+reg a;
+wire b;
+not_gate uut(.a(a),.b(b));
 initial
     begin
-    a=1'b0;b=1'b0;
+    a=1'b0;
     #100
-    a=1'b0;b=1'b1;
-    #100
-    a=1'b1;b=1'b0;
-    #100
-    a=1'b1;b=1'b1;
+    a=1'b0;
     end
 endmodule

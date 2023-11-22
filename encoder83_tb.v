@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/13/2023 02:23:45 PM
+// Create Date: 09/27/2023 03:44:07 PM
 // Design Name: 
-// Module Name: half_subtractor_tb
+// Module Name: encoder83_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,18 +20,28 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module half_subtractor_tb();
-reg a,b;
-wire diff,borrow;
-half_subtractor uut(.a(a),.b(b),.diff(diff),.borrow(borrow));
+module encoder83_tb();
+reg [7:0] D;
+wire [2:0] y;
+encoder83 uut(.D(D),.y(y));
 initial
     begin
-    a=1'b0;b=1'b0;
+    D=8'b00000001;
     #100
-    a=1'b0;b=1'b1;
+    D=8'b00000010;
     #100
-    a=1'b1;b=1'b0;
+    D=8'b00000100;
     #100
-    a=1'b1;b=1'b1;
+    D=8'b00001000;
+    #100
+    D=8'b00010000;
+    #100
+    D=8'b00100000;
+    #100
+    D=8'b01000000;
+    #100
+    D=8'b10000000;
+    #100
+    $finish;
     end
 endmodule

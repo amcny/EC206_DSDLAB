@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/13/2023 02:23:45 PM
+// Create Date: 09/11/2023 11:30:41 PM
 // Design Name: 
-// Module Name: half_subtractor_tb
+// Module Name: boolexp_3_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,18 +20,26 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module half_subtractor_tb();
-reg a,b;
-wire diff,borrow;
-half_subtractor uut(.a(a),.b(b),.diff(diff),.borrow(borrow));
+module boolexp_3_tb();
+reg a,b,c;
+wire y;
+boolexp_3 uut(.a(a),.b(b),.c(c),.y(y));
 initial
     begin
-    a=1'b0;b=1'b0;
+    a=1'b0 ; b=1'b0; c=1'b0;
     #100
-    a=1'b0;b=1'b1;
+    a=1'b0 ; b=1'b0; c=1'b1;
     #100
-    a=1'b1;b=1'b0;
+    a=1'b0 ; b=1'b1; c=1'b0;
     #100
-    a=1'b1;b=1'b1;
+    a=1'b0 ; b=1'b1; c=1'b1;
+    #100
+    a=1'b1 ; b=1'b0; c=1'b0;
+    #100
+    a=1'b1 ; b=1'b0; c=1'b1;
+    #100
+    a=1'b1 ; b=1'b1; c=1'b0;
+    #100
+    a=1'b1 ; b=1'b1; c=1'b1;
     end
 endmodule
