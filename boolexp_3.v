@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/13/2023 02:20:21 PM
+// Create Date: 09/11/2023 11:14:02 PM
 // Design Name: 
-// Module Name: half_subtractor
+// Module Name: boolexp_3
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,10 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module half_subtractor(
-    input a,b,
-    output diff,borrow
+module boolexp_3(
+    input a,b,c,
+    output y
     );
-assign diff=a^b;
-assign borrow=(~a)&b;
+assign y=(a|1)&((~b)|1)&((~c)|1);
 endmodule
